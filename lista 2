@@ -1,0 +1,44 @@
+1. Criar um programa em C que calcule e imprima a área de um losango.
+Formula: (diagonal maior * diagonal menor) dividido por 2
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int diag1, diag2;
+    printf("Informe o valor da diagonal maior: ");
+    scanf("%d", &diag1);
+    
+    printf("Informe o valor da diagonal menor: ");
+    scanf("%d", &diag2);    
+
+    int area = (diag1 * diag2) / 2;
+    
+    printf("A área do losango é: %d", area);
+
+    return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+2. Entrar com os valores dos catetos de um triângulo retângulo e imprimir a hipotenusa.
+Formula: hipotenusa = raiz (b2 + c2);
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float cat1, cat2;
+    printf("Informe o valor do primeiro cateto: ");
+    scanf("%f", &cat1);
+    
+    printf("Informe o valor do segundo cateto: ");
+    scanf("%f", &cat2);    
+
+    float hipo = sqrt(pow(cat1,2) + pow (cat2, 2));
+    
+    printf("A hipotenusa é: %.2f", hipo);
+
+    return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
