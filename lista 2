@@ -42,3 +42,180 @@ int main()
     return 0;
 }
 _______________________________________________________________________________________________________________________________________________________________________
+3. Entrar com a razão de uma PA e o valor do 1º termo. Calcule e imprima o 10o termo.
+Formula: decimotermo = primeirotermo + (posição desejada – 1) * razão
+
+#include <stdio.h>
+#include <conio.h>
+
+int main () {
+	int razao, primeiroTermo, decimoTermo;
+	printf("Informe o valor da razão: ");
+	scanf("%d", &razao);
+	printf("Informe o valor do primeiro termo: ");
+	scanf("%d", &primeiroTermo);
+	
+	decimoTermo = primeiroTermo + (10 - 1) * razao;
+	
+	printf("O décimo termo é: %d", decimoTermo);
+	
+	
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+4. Entrar com a razão de uma PG e o valor do 1º termo. Calcular e imprimir o 5o termo.
+Formula: quintotermo = primeirotermo * razão (quintaposicao – 1)
+
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+
+int main () {
+	int razao, primeiroTermo, quintoTermo;
+	printf("Informe o valor da razão: ");
+	scanf("%d", &razao);
+	printf("Informe o valor do primeiro termo: ");
+	scanf("%d", &primeiroTermo);
+	
+	quintoTermo = primeiroTermo * pow(razao, 5 - 1);
+	
+	printf("O quinto termo é: %d", quintoTermo);
+	
+	
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+5. Faça um programa em C que leia 5 valores e determine o menor deles.
+
+
+#include <stdio.h>
+#include <conio.h>
+
+int main () {
+	int n1, n2, n3, n4, n5;
+	printf("Informe um valor: ");
+	scanf("%d", &n1);
+	printf("Informe um valor: ");
+	scanf("%d", &n2);
+	printf("Informe um valor: ");
+	scanf("%d", &n3);
+	printf("Informe um valor: ");
+	scanf("%d", &n4);
+	printf("Informe um valor: ");
+	scanf("%d", &n5);
+	
+	if (n1 > n2 && n1 > n3 && n1 > n4 && n1 > n5)
+	{
+	    printf("O maior número é %d", n1);
+	}
+	else if (n2 > n1 && n2 > n3 && n2 > n4 && n2 > n5)
+	{
+	    printf("O maior número é %d", n2);
+	}
+	else if (n3 > n1 && n3 > n2 && n3 > n4 && n3 > n5)
+	{
+	    printf("O maior número é %d", n3);
+	}
+	else if (n4 > n1 && n4 > n2 && n4 > n3 && n4 > n5)
+	{
+	    printf("O maior número é %d", n4);
+	}
+	else if (n5 > n1 && n5 > n2 && n5 > n3 && n5 > n4)
+	{
+	    printf("O maior número é %d", n5);
+	}
+	
+	
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+6. Dado 3 valores (X, Y, Z) que representam os lados de um triangulo, verifique se estes valores 
+formam um triangulo eqüilátero, isósceles ou escaleno. 
+Dica: o triangulo eqüilátero tem os três lados iguais, isósceles dois lados iguais e escaleno os três 
+lados diferentes.
+
+#include <stdio.h>
+#include <conio.h>
+
+int main () {
+	int x, y, z;
+	
+	printf("Informe o valor de X:" );
+	scanf("%d", &x);
+	printf("Informe o valor de Y:" );
+	scanf("%d", &y);
+	printf("Informe o valor de Z:" );
+	scanf("%d", &z);
+	
+	if (x == y && x == z)
+	{	
+		printf("O triangulo é equilatero!");
+	}
+	else if (x != y && y != z && x != z)
+	{
+		printf("O triangulo é escaleno!");
+	}
+	else 
+	{
+		printf("O triangulo é isosceles!");
+	}
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+7. Escreva um programa em C para ler 2 valores (considere que não serão informados valores 
+iguais) e escrever o maior deles. 
+
+#include <stdio.h>
+#include <conio.h>
+
+int main () {
+	int num1, num2;
+	
+	printf("Informe o primeiro valor: " );
+	scanf("%d", &num1);
+	printf("Informe o segundo valor: " );
+	scanf("%d", &num2);
+
+	
+	if (num1 > num2)
+	{	
+		printf("O maior número é: %d", num1);
+	}
+	else 
+	{
+		printf("O maior número é: %d", num2);
+	}
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+8.  Elabore um programa em C que peça três números ao utilizador, e que indique qual dos três é o 
+maior.
+
+#include <stdio.h>
+#include <conio.h>
+
+int main () {
+	int num1, num2, num3;
+	
+	printf("Informe o primeiro valor: " );
+	scanf("%d", &num1);
+	printf("Informe o segundo valor: " );
+	scanf("%d", &num2);
+	printf("Informe o terceiro valor: " );
+	scanf("%d", &num3);
+
+	
+	if (num1 > num2 && num1 > num3)
+	{	
+		printf("O maior número é: %d", num1);
+	}
+	else if (num2 > num1 && num2 > num3)
+	{
+	    printf("O maior número é: %d", num2);
+	}
+	else 
+	{
+		printf("O maior número é: %d", num3);
+	}
+	return 0;
+}
