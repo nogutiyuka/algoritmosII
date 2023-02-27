@@ -27,4 +27,75 @@ int main()
     return 0;
 }
 _______________________________________________________________________________________________________________________________________________________________________
-3. 
+3.  Escreva um programa em C para ler as notas da 1a. e 2a. avaliações de um aluno, calcular e
+imprimir a média semestral. Faça com que o algoritmo só aceite notas válidas (0 a 10). Cada
+nota deve ser validada separadamente.
+
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    float n1, n2;
+    printf("Informe a primeira nota: ");
+    scanf("%f", &n1);
+    
+    while (n1 <0 || n1 > 10)
+    {
+        printf("Valor inválido, favor informar outro nota: ");
+        scanf("%f", &n1);
+    }
+    
+    printf("Informe a segunda nota: ");
+    scanf("%f", &n2);
+    
+    while (n2 <0 || n2 > 10)
+    {
+        printf("Valor inválido, favor informar outro valor: ");
+        scanf("%f", &n2);
+    }
+    double media;
+    
+    media = (n1+n2)/2;
+    
+    printf("A média semestral é de: %.2f", media);
+    
+    return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+4. Escreva um programa em C que imprima os dez primeiros números inteiros maiores que 100
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int i = 100;
+    while (i <= 110)
+    {
+        printf("%d\n", i);
+        i++;
+    }
+    
+    return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+5. Escrever os números de 1 a 10 utilizando uma estrutura ENQUANTO. 
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int i = 1;
+    while (i <=10)
+    {
+        printf("%d\n", i);
+        i++;
+    }
+    
+    return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+6. Ler 10 valores, calcular e escrever a média aritmética destes valores. 
