@@ -1,4 +1,30 @@
-1.  Faça um programa em C que leia palavras digitadas pelo usuário e que, para cada uma delas, 
-imprima a frase "Você digitou a palavra: xxxx" (onde "xxxx" é a palavra digitada). O programa 
-deve repetir essas operações até o usuário digitar a palavra "fim". O programa não deve 
-imprimir a frase de resposta quando a palavra digitada for "fim".
+2. Escreva um programa em C para ler 2 valores (se o segundo valor informado for ZERO
+apresentará a seguinte mensagem "Valor inválido" e deverá ler um novo valor até que ele seja
+um valor válido) e imprimir o resultado da divisão do primeiro pelo segundo. 
+
+#include <stdio.h>
+#include <conio.h>
+
+int main()
+{
+    int n1, n2;
+    printf("Informe o primeiro valor: ");
+    scanf("%d", &n1);
+    printf("Informe o segundo valor: ");
+    scanf("%d", &n2);
+    
+    while (n2 == 0)
+    {
+        printf("Valor inválido, favor informar outro valor: ");
+        scanf("%d", &n2);
+    }
+    double divisao;
+    
+    divisao = n1/n2;
+    
+    printf("O resultado da divisão é de: %.2f", divisao);
+    
+    return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+3. 
