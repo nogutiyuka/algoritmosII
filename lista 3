@@ -99,3 +99,24 @@ int main()
 }
 _______________________________________________________________________________________________________________________________________________________________________
 6. Ler 10 valores, calcular e escrever a média aritmética destes valores. 
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int soma;
+    int valor = 0;
+    
+    for (int i = 0; i < 10; i++) {
+        printf("Valor: ");
+        scanf("%d", &soma);
+        valor += soma;
+    }
+    
+    float media = valor/10;
+    
+    printf("A média é de: %.2f", media);
+    
+    return 0;
+}
