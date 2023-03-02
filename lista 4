@@ -1,0 +1,82 @@
+1. Criar um programa em c que armazene números em dois vetores inteiros de cinco elementos cada. 
+Gere e imprima o vetor soma (soma dos dois vetores).
+
+#include <stdio.h>
+
+int main () {
+	int vetor1[5], vetor2[5];
+	
+	for (int a = 0; a < 5; a++){
+		printf("VALOR: ");
+		scanf("%d", &vetor1[a]);
+
+	}
+	
+	for (int b = 0; b < 5; b++){
+		printf("VALOR: ");
+		scanf("%d", &vetor2[b]);
+	}
+	
+	int soma [5];
+	
+	for (int c = 0; c < 5; c++){
+		soma[c] = (vetor1[c] + vetor2[c]); 
+	}
+	
+
+	for (int d = 0; d < 5; d++){
+		printf("A SOMA E: %d\n", soma[d]);
+	}
+
+	
+	return 0;
+}
+________________________________________________________________________________________________________________________________________________________________________
+2. Armazenar 15 números inteiros em um vetor NUM e imprimir os números fornecidos dizendo se 
+eles são par ou impar
+
+#include <stdio.h>
+
+int main () {
+	int num[15];
+	
+	for (int a = 0; a < 15; a++){
+		printf("VALOR: ");
+		scanf("%d", &num[a]);
+	}
+	
+	for (int b = 0; b < 15; b++){
+		if (num[b] % 2 != 0){
+			printf("O NUMERO %d E IMPAR\n", num[b]);
+		}
+		else{
+			printf("O NUMERO %d E PAR\n", num[b]);
+		}
+	}
+	
+	return 0;
+}
+________________________________________________________________________________________________________________________________________________________________________
+3. Armazenar 8 números em um vetor e apresentar os números que forem múltiplos de 6.
+
+#include <stdio.h>
+
+int main () {
+	int vetor[3];
+	
+	for (int a = 0; a < 3; a++){
+		printf("VALOR: ");
+		scanf("%d", &vetor[a]);
+	}
+	
+	for (int b = 0; b < 3; b++){
+		if (vetor[b] % 6 == 0){
+			printf("O NUMERO %d E DIVISIVEL POR 6.\n", vetor[b]);
+		}
+
+	}
+	
+	return 0;
+}
+________________________________________________________________________________________________________________________________________________________________________
+4. Criar um vetor que armazena o preço de 5 produtos, atualizar o preço em 10%.
