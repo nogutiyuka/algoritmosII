@@ -30,3 +30,38 @@ ________________________________________________________________________________
 conjunto de 10 alunos. Depois de preenchida a estrutura o algoritmo deverá exibir uma 
 listagem dos nomes dos alunos seguidos da informação aprovado ou reprovado. 
 Considere que os alunos que obtiveram média inferior a 6,0 estão reprovados.
+
+#include <stdio.h>
+#include <string.h>
+
+int main () {
+	char nome[3];
+	float nota[3][4];
+	float media [3], soma[3];
+	
+	for (int a = 0; a < 3; a++){
+		printf("Informe o nome do aluno: ");
+		scanf("%s", &nome[a]);
+		for (int b = 0; b < 4; b++){
+			printf("Informe a %d nota do(a) aluno(a): ", b+1);
+			scanf("%d", &nota[a][b]);
+		}
+	}
+	
+	for (int a = 0; a < 3; a++){
+		for (int b = 0; b < 4; b++){
+			soma[a]= nota[a][b] + soma[a];
+		}
+		printf("%f\n", soma[a]);
+		media [a] = soma[a] / 4;
+	}
+	
+	for (int a = 0; a < 3; a++){
+		printf("%f\n", media[a]);
+	} 
+	
+	
+	return 0;
+}
+
+							ERRADO TENTAR EM CASA
