@@ -1,3 +1,32 @@
 1. Faça um programa em C que leia valores para uma matriz 3x3 de valores inteiros e 
 depois multiplique esta matriz por um valor inteiro x a ser fornecido pelo usuário;
  
+#include <stdio.h>
+
+int main () {
+	int vetor[3][3], valor;
+	
+	for (int a = 0; a < 3; a++){
+		for (int b = 0; b < 3; b++){
+			printf("VALOR: ");
+			scanf("%d", &vetor[a][b]);
+		}
+	}
+	
+	printf("Valor pela qual a matriz sera multiplicada: ");
+	scanf("%d", &valor);
+	
+	for (int a = 0; a < 3; a++){
+		for (int b = 0; b < 3; b++){
+			vetor[a][b] = vetor[a][b] * valor;
+			printf("%d\n", vetor[a][b]);
+		}
+	}
+	
+	return 0;
+}
+__________________________________________________________________________________________________________________________________________________________________________
+2. Faça um programa em C que leia o nome e as quatro notas bimestrais para um 
+conjunto de 10 alunos. Depois de preenchida a estrutura o algoritmo deverá exibir uma 
+listagem dos nomes dos alunos seguidos da informação aprovado ou reprovado. 
+Considere que os alunos que obtiveram média inferior a 6,0 estão reprovados.
