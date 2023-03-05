@@ -35,74 +35,41 @@ Considere que os alunos que obtiveram média inferior a 6,0 estão reprovados.
 #include <string.h>
 
 int main () {
-	char nome[3];
+	char nome[10][50];
 	float nota[3][4];
-	float media [3], soma[3];
+	float media;
 	
-	for (int a = 0; a < 3; a++){
+	for (int a = 0; a < 10; a++){
 		printf("Informe o nome do aluno: ");
-		scanf("%s", &nome[a]);
-		for (int b = 0; b < 4; b++){
-			printf("Informe a %d nota do(a) aluno(a): ", b+1);
-			scanf("%d", &nota[a][b]);
-		}
-	}
-	
-	for (int a = 0; a < 3; a++){
-		for (int b = 0; b < 4; b++){
-			soma[a]= nota[a][b] + soma[a];
-		}
-		printf("%f\n", soma[a]);
-		media [a] = soma[a] / 4;
-	}
-	
-	for (int a = 0; a < 3; a++){
-		printf("%f\n", media[a]);
-	} 
-	
-	
-	return 0;
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main () {
-	char nome[3];
-	float nota[3][4];
-	float media [3], soma[3];
-	
-	for (int a = 0; a < 3; a++){
-		printf("Informe o nome do aluno: ");
-		scanf("%s", &nome[a]);
+		scanf("%s", nome[a]);
 		for (int b = 0; b < 4; b++){
 			printf("Informe a %d nota do(a) aluno(a): ", b+1);
 			scanf("%f", &nota[a][b]);
 		}
 	}
 	
-	for (int a = 0; a < 3; a++){
+	for (int a = 0; a < 10; a++){
+	    
+	    media = 0;
+	    printf("%s", nome[a]);
 		for (int b = 0; b < 4; b++){
-			soma[a]= nota[a][b] + soma[a];
+			media= nota[a][b] + media;
 		}
-		media [a] = soma[a] / 4;
-	}
-	
-	for (int a = 0; a < 3; a++){
-        if (media [a] >= 6) {
-            printf("Aluno(a) foi aprovado(a)!");
+		media = media / 4;
+		if (media >= 6) {
+            printf("| Aprovado(a)!\n");
         }
         else{
-            printf("Aluno(a) %s foi reprovado(a)", &nome[a]);
+            printf("| Reprovado(a)!\n");
         }
-	} 
-	
-	for (int z = 0; z < 3; z++){
-	    printf("%f", media[z]);
 	}
+	
 	
 	
 	return 0;
 }
+__________________________________________________________________________________________________________________________________________________________________________
+3. Faça um programa em C que armazene um total de 10 valores inteiros digitados pelo
+usuário e, posteriormente, informe quantos dos números digitados são múltiplos de 7.
 
-							ERRADO TENTAR EM CASA
+							
