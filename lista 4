@@ -62,14 +62,14 @@ ________________________________________________________________________________
 #include <stdio.h>
 
 int main () {
-	int vetor[3];
+	int vetor[8];
 	
-	for (int a = 0; a < 3; a++){
+	for (int a = 0; a < 8; a++){
 		printf("VALOR: ");
 		scanf("%d", &vetor[a]);
 	}
 	
-	for (int b = 0; b < 3; b++){
+	for (int b = 0; b < 8; b++){
 		if (vetor[b] % 6 == 0){
 			printf("O NUMERO %d E DIVISIVEL POR 6.\n", vetor[b]);
 		}
@@ -84,18 +84,18 @@ ________________________________________________________________________________
 #include <string.h>
 
 int main () {
-	float vetor[8], porcentagem[8], novo[8];
+	float vetor[5], porcentagem[5], novo[5];
 	
-	for (int a = 0; a < 8; a++){
+	for (int a = 0; a < 5; a++){
 		printf("PRECO: ");
 		scanf("%f", &vetor[a]);
 	}
 	
-	for (int b = 0; b < 8; b++){
+	for (int b = 0; b < 5; b++){
 		porcentagem[b] = vetor[b] * 0.10;
 	}
 	
-	for (int c = 0; c < 8; c++){
+	for (int c = 0; c < 5; c++){
 		novo[c] = vetor[c] + porcentagem[c];
 		printf("O NOVO VALOR E: %.2f\n", novo[c]);
 	}
