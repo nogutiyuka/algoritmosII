@@ -72,4 +72,23 @@ ________________________________________________________________________________
 3. Faça um programa em C que armazene um total de 10 valores inteiros digitados pelo
 usuário e, posteriormente, informe quantos dos números digitados são múltiplos de 7.
 
+#include <stdio.h>
+
+int main () {
+	int vetor[10];
+	
+	for (int a = 0; a < 10; a++){
+		printf("VALOR: ");
+		scanf("%d", &vetor[a]);
+	}
+	
+	for (int b = 0; b < 10; b++){
+		if (vetor[b] % 7 == 0){
+			printf("O NUMERO %d E DIVISIVEL POR 7.\n", vetor[b]);
+		}
+
+	}
+	
+	return 0;
+}
 							
