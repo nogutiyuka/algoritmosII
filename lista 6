@@ -53,3 +53,105 @@ int main () {
 }
 _______________________________________________________________________________________________________________________________________________________________________
 2. Armazenar o salário de 20 pessoas. Calcular e armazenar o novo salário sabendose que o reajuste foi de 8%.
+#include <stdio.h>
+
+int main () {
+    float salario[20];
+    float novo[20];
+    
+    for (int i = 0; i < 20; i++){
+        printf("Sálario %d: ", i+1);
+        scanf("%f", &salario[i]);
+    }
+    
+    for (int cont = 0; cont < 20; cont++){
+        novo[cont] = (salario[cont] * 0.08) + salario[cont];
+        printf("O novo salário é de: %.2f\n", novo[cont]);
+    }
+    
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+3. Criar um algoritmo que leia dois conjuntos de números inteiros, tendo cada um 20 
+elementos e apresente os elementos comuns aos conjuntos.
+#include <stdio.h>
+
+int main () {
+    int primeiro[20];
+    int segundo[20];
+    
+    for (int i = 0; i < 20; i++){
+        printf("Primeiro conjunto: ");
+        scanf("%d", &primeiro[i]);
+    }
+    
+    for (int a = 0; a < 20; a++){
+        printf("Segundo conjunto: ");
+        scanf("%d", &segundo[a]);
+    }
+    
+    for (int cont = 0; cont < 20; cont++){
+        for (int b = 0; b < 20; b++){
+            if (primeiro[cont] == segundo[b]){
+                printf("Elemento comum: %d\n", primeiro[cont]);
+            }
+        }
+    }
+    
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+4. Ler um vetor v de 10 elementos e obter um vetor w cujos componentes são os 
+quadrados dos respectivos componentes de v.
+#include <stdio.h>
+#include <math.h>
+
+int main () {
+    int v[10];
+    int w[10];
+    
+    for (int i = 0; i < 10; i++){
+        printf("Valor %d do primeiro vetor: ", i+1);
+        scanf("%d", &v[i]);
+    }
+    
+    for (int cont = 0; cont < 10; cont++){
+        w[cont] = pow(v[cont], 2);
+    }
+    
+    for (int a = 0; a < 10; a++){
+        printf("Valor %d do primeiro vetor elevado ao quadrado: %d\n", a+1, w[a]);
+    }
+    
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+5. Criar um algoritmo que leia um conjunto de 30 valores inteiros, armazene-os em 
+um vetor e escreva-os ao contrário da ordem de leitura.
+
+#include <stdio.h>
+#include <math.h>
+
+int main () {
+    int v[3];
+    int w[3];
+    int c = 0;
+    
+    for (int i = 0; i < 3; i++){
+        printf("Valor %d do primeiro vetor: ", i+1);
+        scanf("%d", &v[i]);
+    }
+    
+
+
+    for (int cont = 2; cont >= 0; cont--){
+        w[c] = v[cont];
+        c++;
+    }
+    
+    for (int a = 0; a < 3; a++){
+        printf("%d\n", w[a]);
+    }
+    
+	return 0;
+}
