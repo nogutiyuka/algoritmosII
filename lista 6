@@ -1,0 +1,55 @@
+STRUCT
+#include <stdio.h>
+
+struct pessoa {
+	char nome[30];
+	char endereco[40];
+	char cidade[20];
+	int idade;
+};
+
+int main () {
+	struct pessoa clientes[2];
+	
+	for (int i = 0; i <= 2; i++) {
+		printf("Informe o nome: ");
+		scanf("%s", clientes[i].nome);
+		printf("Informe a idade: ");
+		scanf("%d", &clientes[i].idade);
+		printf("Informe o endereço: ");
+		scanf("%s", clientes[i].endereco);
+		fflush(stdin);
+		printf("Informe a cidade: ");
+		scanf("%s", clientes[i].cidade);
+	}
+	
+	for (int cont = 0; cont <= 2; cont++){
+		printf("%s\n", clientes[cont].nome);
+		printf("%d\n", clientes[cont].idade);
+		printf("%s\n", clientes[cont].endereco);
+		printf("%s\n", clientes[cont].cidade);
+	}
+		
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+1. Armazenar 10 números em um vetor NUMERO e imprimir uma listagem 
+numerada.
+#include <stdio.h>
+
+int main () {
+    int numero[10];
+    
+    for (int i = 0; i < 10; i++){
+        printf("Valor: ");
+        scanf("%d", &numero[i]);
+    }
+    
+    for (int cont = 0; cont < 10; cont++){
+        printf("Valor: %d\n", numero[cont]);
+    }
+    
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+2. Armazenar o salário de 20 pessoas. Calcular e armazenar o novo salário sabendose que o reajuste foi de 8%.
