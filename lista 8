@@ -1,0 +1,4 @@
+1. Um vendedor de automóveis armazena os seguintes dados de um veículo:
+fabricante, modelo, ano, placa, cor, tipo de combustível (A é álcool e G é
+gasolina), preço e valor do IPVA. Escreva a declaração de um registro para estes
+dados.
