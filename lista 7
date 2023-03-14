@@ -22,3 +22,118 @@ int main () {
 _______________________________________________________________________________________________________________________________________________________________________
 2. Criar um algoritmo que leia os elementos de uma matriz inteira 10 X 10 e escreva 
 todos os elementos, exceto os elementos da diagonal principal.
+
+#include <stdio.h>
+
+int main () {
+    int v[10][10];
+    
+    for (int i = 0; i < 10; i++){
+        for (int a = 0; a < 10; a++){
+            printf("Valor: ");
+            scanf("%d", &v[i][a]);
+        }
+    }
+
+    for (int b = 0; b < 10; b++){
+        for (int c = 0; c < 10; c++){
+            if (b != c){
+                printf("%d\n", v[b][c]); 
+            }
+        }
+    }
+    
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+3. Criar um algoritmo que armazene dados em uma matriz de ordem 5 e imprima
+toda a matriz.
+
+#include <stdio.h>
+
+int main () {
+    int v[5][5];
+    
+    for (int i = 0; i < 5; i++){
+        for (int a = 0; a < 5; a++){
+            printf("Valor: ");
+            scanf("%d", &v[i][a]);
+        }
+    }
+
+    for (int b = 0; b < 5; b++){
+        for (int c = 0; c < 5; c++){
+            printf("%d\n", v[b][c]); 
+        }
+    }
+    
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+4. Entrar com valores para uma matriz 3 X 4. Gerar e imprimir uma matriz B que é o
+triplo da matriz A
+
+#include <stdio.h>
+
+int main () {
+    int v[3][4], w[3][4];
+    
+    for (int i = 0; i < 3; i++){
+        for (int a = 0; a < 4; a++){
+            printf("Valor: ");
+            scanf("%d", &v[i][a]);
+        }
+    }
+
+    for (int d = 0; d < 3; d++){
+        for (int e = 0; e < 4; e++){
+            w[d][e] = 3 * v[d][e];
+        }
+    }
+
+    for (int b = 0; b < 3; b++){
+        for (int c = 0; c < 4; c++){
+            printf("%d\n", w[b][c]); 
+        }
+    }
+    
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+5. Entrar com valores para uma matriz A 4 X 4 e para uma matriz B 4 X 4. Gerar e
+imprimir a matriz soma 4 X 4.
+
+#include <stdio.h>
+
+int main () {
+    int a[4][4], b[4][4], soma[4][4];
+    
+    for (int i = 0; i < 4; i++){
+        for (int j = 0; j < 4; j++){
+            printf("Valor: ");
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    for (int d = 0; d < 4; d++){
+        for (int e = 0; e < 4; e++){
+            printf("Valor: ");
+            scanf("%d", &b[d][e]);
+        }
+    }
+
+    for (int f = 0; f < 4; f++){
+        for (int g = 0; g < 4; g++){
+            soma[f][g] = a[f][g] + b[f][g]; 
+        }
+    }
+    
+    for (int b = 0; b < 4; b++){
+        for (int c = 0; c < 4; c++){
+            printf("%d\n", soma[b][c]); 
+        }
+    }
+    
+    
+	return 0;
+}
