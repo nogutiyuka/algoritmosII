@@ -2,3 +2,117 @@
 fabricante, modelo, ano, placa, cor, tipo de combustível (A é álcool e G é
 gasolina), preço e valor do IPVA. Escreva a declaração de um registro para estes
 dados.
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct vendedor {
+	char fabricante[40];
+	char modelo[40];
+	int ano;
+	char placa[8];
+	char cor[40];
+	char tipoCombustivel;
+	float preco;
+	float valorIPVA;
+	
+};
+
+int main () {
+    int num;
+    printf("Informe quantos automoveis deseja cadastrar: ");
+    scanf("%d", &num);
+    
+	struct vendedor automovel[num];
+	
+	for (int i = 0; i < num; i++) {
+		printf("Informe o fabricante: ");
+		scanf("%s", automovel[i].fabricante);
+		printf("Informe o modelo: ");
+		scanf("%s", automovel[i].modelo);
+		printf("Informe o ano: ");
+		scanf("%d", &automovel[i].ano);
+		printf("Informe a placa: ");
+		scanf("%s", automovel[i].placa);
+		printf("Informe a cor: ");
+		scanf("%s", automovel[i].cor);
+		fflush(stdin);
+		printf("Informe o tipo de combustivel: ");
+		scanf("%c", &automovel[i].tipoCombustivel);
+		printf("Informe o preco: ");
+		scanf("%f", &automovel[i].preco);
+		printf("Informe o valor do IPVA: ");
+		scanf("%f", &automovel[i].valorIPVA);
+
+	}
+	
+	for (int cont = 0; cont <= num; cont++){
+		printf("%s\n", automovel[cont].fabricante);
+		printf("%s\n", automovel[cont].modelo);
+		printf("%d\n", automovel[cont].ano);
+		printf("%s\n", automovel[cont].placa);
+		printf("%s\n", automovel[cont].cor);
+		printf("%c\n", automovel[cont].tipoCombustivel);
+		printf("%f\n", automovel[cont].preco);
+		printf("%f\n", automovel[cont].valorIPVA);
+	}
+		
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+2. Defina um registro para armazenar os seguintes dados de clientes de um banco:
+nome do cliente, código da agência, data de nascimento (formato dd/mm/aaaa),
+saldo atual e situação (cliente ‘V’IP ou ‘N’ORMAL). 
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct banco {
+	char nome[40];
+	int codigoAgencia;
+	char dataNascimento[10];
+	float saldoAtual;
+	char situacao;
+};
+
+int main () {
+    int num;
+    printf("Informe quantos clientes deseja cadastrar: ");
+    scanf("%d", &num);
+    
+	struct banco cliente[num];
+	
+	for (int i = 0; i < num; i++) {
+		printf("Informe o nome do cliente: ");
+		scanf("%s", cliente[i].nome);
+		printf("Informe o codigo da agencia: ");
+		scanf("%d", &cliente[i].codigoAgencia);
+		printf("Informe a data de nascimento no formato 'dd/mm/aaaa': ");
+		scanf("%s", cliente[i].dataNascimento);
+		printf("Informe o saldo atual: ");
+		scanf("%f", &cliente[i].saldoAtual);
+		fflush(stdin);
+		printf("Informe a situacao 'V' para VIP e 'N' para normal: ");
+		scanf("%c", &cliente[i].situacao);
+
+	}
+	
+	for (int cont = 0; cont <= num; cont++){
+		printf("%s\n", cliente[cont].nome);
+		printf("%d\n", cliente[cont].codigoAgencia);
+		printf("%s\n", cliente[cont].dataNascimento);
+		printf("%f\n", cliente[cont].saldoAtual);
+		printf("%c\n", cliente[cont].situacao);
+
+	}
+		
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+3. Num certo município, vários proprietários de imóveis estão com atraso com o
+pagamento do IPTU. Faça um algoritmo para ler os dados do imóvel e imprimir o
+valor do IPTU com a multa a ser paga, considerando os dados do imóvel: número
+de cadastro, valor do imposto e quantidade de meses em atraso. A multa é de R$
+10,00 por cada mês de atraso.
