@@ -130,3 +130,45 @@ ________________________________________________________________________________
 nome, editora, isbn, ano de edição, número de páginas e preço. Criar uma
 variável desta estrutura que é um vetor de 5 elementos. Ler os valores para a
 estrutura e imprimir a média do número de páginas dos livros.
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct livro {
+	char nome[100];
+	char editora[50];
+	int isbn;
+	int ano;
+	int paginas;
+    float preco;
+    int soma;
+};
+
+int main () {
+    
+	struct livro relatorio[5];
+	
+	for (int i = 0; i < 5; i++) {
+		printf("Informe o nome do livro: ");
+		scanf("%s", relatorio[i].nome);
+		printf("Informe a editora: ");
+		scanf("%s", relatorio[i].editora);
+		printf("Informe o ISBN: ");
+		scanf("%d", &relatorio[i].isbn);
+		printf("Informe o ano da edicao: ");
+		scanf("%d", &relatorio[i].ano);
+		printf("Informe o numero de paginas: ");
+		scanf("%d", &relatorio[i].paginas);
+		printf("Informe o preco: ");
+		scanf("%f", &relatorio[i].preco);
+		relatorio[i].soma =+ relatorio[i].paginas;
+	}
+	float media = 0;
+    for(int i = 0; i < 5; i++){
+        media = media + relatorio[i].paginas;
+    }
+    printf("Media: %2.f \n", media/5);
+		
+	return 0;
+}
