@@ -116,3 +116,192 @@ pagamento do IPTU. Faça um algoritmo para ler os dados do imóvel e imprimir o
 valor do IPTU com a multa a ser paga, considerando os dados do imóvel: número
 de cadastro, valor do imposto e quantidade de meses em atraso. A multa é de R$
 10,00 por cada mês de atraso.
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct imovel {
+	int numCadastro;
+	float valorImposto;
+	int qtdMesAtraso;
+	float valorPagar;
+};
+
+int main () {
+    int num;
+    printf("Informe quantos imóveis deseja cadastrar: ");
+    scanf("%d", &num);
+    
+	struct imovel IPTU[num];
+	
+	for (int i = 0; i < num; i++) {
+		printf("Informe o cadastro do imovel: ");
+		scanf("%d", &IPTU[i].numCadastro);
+		printf("Informe o valor do imposto: ");
+		scanf("%f", &IPTU[i].valorImposto);
+		printf("Informe quantos meses o IPTU está atrasado: ");
+		scanf("%d", &IPTU[i].qtdMesAtraso);
+		IPTU[i].valorPagar = (10 * IPTU[i].qtdMesAtraso) + IPTU[i].valorImposto;
+	}
+	
+	for (int cont = 0; cont <= num; cont++){
+		printf("O valor a pagar e: %.2f\n", IPTU[cont].valorPagar);
+	}
+		
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+4. Numa viação, uma passagem de ônibus inclui os seguintes campos: número,
+código do local de partida, código do local de chegada, poltrona, tipo de assento (J
+– janela e C – corredor). Faça a definição do registro relativo a esta passagem.
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct passagem {
+	int numPassagem;
+	int codPartida;
+	int codChegada;
+	char assento;
+};
+
+int main () {
+    int num;
+    printf("Informe quantas passagens deseja cadastrar: ");
+    scanf("%d", &num);
+    
+	struct passagem onibus[num];
+	
+	for (int i = 0; i < num; i++) {
+		printf("Informe o numero da passagem: ");
+		scanf("%d", &onibus[i].numPassagem);
+		printf("Informe o codigo do local de partida: ");
+		scanf("%d", &onibus[i].codPartida);
+		printf("Informe o codigo do local de chegada: ");
+		scanf("%d", &onibus[i].codChegada);
+		printf("Informe o tipo de assento 'J' para Janela e 'C' para corredor: ");
+		scanf("%c", &onibus[i].assento);
+	}
+	
+	for (int cont = 0; cont <= num; cont++){
+		printf("%d\n", onibus[cont].numPassagem);
+		printf("%d\n", onibus[cont].codPartida);
+		printf("%d\n", onibus[cont].codChegada);
+		printf("%c\n", onibus[cont].assento);
+	}
+		
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+5. A fábrica de tecidos Bicho-da-Seda armazena as seguintes informações sobre cada
+tecido:
+- código numérico
+- descrição do tecido
+- preço do metro
+- quantidade em estoque (em metros)
+Faça um algoritmo que leia um lote de 30 tecidos, e depois imprima:
+a) Um relatório contendo as informações de cada tecido.
+b) Um relatório dos tecidos com estoque inferior a 50 metros.
+c) Um relatório dos tecidos com preço inferior a R$ 0,60 o metro.
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct tecido {
+	int codNumerico;
+	char descricao[100];
+	float preco;
+	double estoque;
+};
+
+int main () {
+    
+	struct tecido fabrica[30];
+	
+	for (int i = 0; i < 30; i++) {
+		printf("Informe o codigo numerico: ");
+		scanf("%d", &fabrica[i].codNumerico);
+		printf("Informe a descricao do produto: ");
+		scanf("%s", fabrica[i].descricao);
+		printf("Informe o preco: ");
+		scanf("%f", &fabrica[i].preco);
+		printf("Informe a quantidade em estoque: ");
+		scanf("%lf", &fabrica[i].estoque);
+	}
+	
+	for (int cont = 0; cont < 30; cont++){
+		printf("%d\n", fabrica[cont].codNumerico);
+		printf("%s\n", fabrica[cont].descricao);
+		printf("%f\n", fabrica[cont].preco);
+		printf("%lf\n", fabrica[cont].estoque);
+	}
+	
+	for (int a = 0; a < 30; a++){
+		if (fabrica[a].estoque < 50){
+		    printf("%d\n", fabrica[a].codNumerico);
+		    printf("%s\n", fabrica[a].descricao);
+		    printf("%f\n", fabrica[a].preco);
+		    printf("%lf\n", fabrica[a].estoque);
+		}
+		else if (fabrica[a].preco < 0.60){
+		    printf("%d\n", fabrica[a].codNumerico);
+		    printf("%s\n", fabrica[a].descricao);
+		    printf("%f\n", fabrica[a].preco);
+		    printf("%lf\n", fabrica[a].estoque);
+		}
+	} 
+		
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+6. O cadastro em um provedor de Internet é feito com os seguintes dados: nome do
+cliente, endereço eletrônico, plano de acesso (1 – ilimitado; 2 – 20 horas/mês; 3 –
+10 horas/mês), valor da mensalidade e situação (A – Ativo ou I – Inativo). Monte
+um registro para representar esta estrutura.
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct cliente {
+	char nome[40];
+	char email[40];
+	char plano;
+	float mensalidade;
+	char situacao;
+};
+
+int main () {
+    int num;
+    printf("Informe quantas clientes deseja cadastrar: ");
+    scanf("%d", &num);
+    
+	struct cliente provedor[num];
+	
+	for (int i = 0; i < num; i++) {
+		printf("Informe o nome do cliente: ");
+		scanf("%s", provedor[i].nome);
+		printf("Informe o email: ");
+		scanf("%s", provedor[i].email);
+		printf("Informe o tipo de plano\n'1' - ilimitado\n'2' - 20 horas/mes\n'3' - 10 horas/mes: ");
+		scanf("%c", &provedor[i].plano);
+		printf("Informe o valor da mensalidade: ");
+		scanf("%f", &provedor[i].mensalidade);
+		printf("Informe a situacao\n'A' - ativo\n'I' - inativo: ");
+		scanf("%c", &provedor[i].situacao);
+		
+	}
+	
+	for (int cont = 0; cont < num; cont++){
+		printf("%s\n", provedor[cont].nome);
+		printf("%s\n", provedor[cont].email);
+		printf("%c\n", provedor[cont].plano);
+		printf("%f\n", provedor[cont].mensalidade);
+		printf("%c\n", provedor[cont].situacao);
+	}
+		
+	return 0;
+}
