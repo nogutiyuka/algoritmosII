@@ -1,0 +1,132 @@
+1. A fábrica de tecidos Bicho-da-Seda armazena as seguintes informações sobre
+cada tecido:
+- código numérico
+- descrição do tecido
+- preço do metro
+- quantidade em estoque (em metros)
+Faça um algoritmo que leia um lote de 30 tecidos, e depois imprima:
+a) Um relatório contendo as informações de cada tecido.
+b) Um relatório dos tecidos com estoque inferior a 50 metros.
+c) Um relatório dos tecidos com preço inferior a R$ 0,60 o metro.
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct tecido {
+	int codNumerico;
+	char descricao[100];
+	float preco;
+	double estoque;
+};
+
+int main () {
+    
+	struct tecido fabrica[30];
+	
+	for (int i = 0; i < 30; i++) {
+		printf("Informe o codigo numerico: ");
+		scanf("%d", &fabrica[i].codNumerico);
+		printf("Informe a descricao do produto: ");
+		scanf("%s", fabrica[i].descricao);
+		printf("Informe o preco: ");
+		scanf("%f", &fabrica[i].preco);
+		printf("Informe a quantidade em estoque: ");
+		scanf("%lf", &fabrica[i].estoque);
+	}
+	
+	for (int cont = 0; cont < 30; cont++){
+		printf("%d\n", fabrica[cont].codNumerico);
+		printf("%s\n", fabrica[cont].descricao);
+		printf("%f\n", fabrica[cont].preco);
+		printf("%lf\n", fabrica[cont].estoque);
+	}
+	
+	for (int a = 0; a < 30; a++){
+		if (fabrica[a].estoque < 50){
+		    printf("%d\n", fabrica[a].codNumerico);
+		    printf("%s\n", fabrica[a].descricao);
+		    printf("%f\n", fabrica[a].preco);
+		    printf("%lf\n", fabrica[a].estoque);
+		}
+		else if (fabrica[a].preco < 0.60){
+		    printf("%d\n", fabrica[a].codNumerico);
+		    printf("%s\n", fabrica[a].descricao);
+		    printf("%f\n", fabrica[a].preco);
+		    printf("%lf\n", fabrica[a].estoque);
+		}
+	} 
+		
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+2. Criar uma estrutura chamada DadosAluno, que armazena o nome e idade de
+um aluno. Na função main: criar uma variável que é uma estrutura
+DadosAluno; ler o nome e a idade de um aluno e armazenar na variável criada;
+exibir na tela o nome e a idade do aluno.
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct dadosAluno {
+	char nome[40];
+    int idade;
+};
+
+int main () {
+    
+	struct dadosAluno aluno[1];
+	
+	for (int i = 0; i < 1; i++) {
+		printf("Informe o nome do aluno: ");
+		scanf("%s", aluno[i].nome);
+		printf("Informe a idade: ");
+		scanf("%d", &aluno[i].idade);
+	}
+	
+	for (int cont = 0; cont < 1; cont++){
+		printf("%s\n", aluno[cont].nome);
+		printf("%d\n", aluno[cont].idade);
+	}
+		
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+3. Considerando o exercício anterior, criar uma variável vetor da estrutura
+DadosAluno. O programa deve obter o nome e a idade de 10 alunos. Depois,
+estes dados devem ser exibidos.
+
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct dadosAluno {
+	char nome[40];
+    int idade;
+};
+
+int main () {
+    
+	struct dadosAluno aluno[10];
+	
+	for (int i = 0; i < 10; i++) {
+		printf("Informe o nome do aluno: ");
+		scanf("%s", aluno[i].nome);
+		printf("Informe a idade: ");
+		scanf("%d", &aluno[i].idade);
+	}
+	
+	for (int cont = 0; cont < 10; cont++){
+		printf("%s\n", aluno[cont].nome);
+		printf("%d\n", aluno[cont].idade);
+	}
+		
+	return 0;
+}
+_______________________________________________________________________________________________________________________________________________________________________
+4. Fazer um programa que cria uma estrutura livro, que contém os elementos
+nome, editora, isbn, ano de edição, número de páginas e preço. Criar uma
+variável desta estrutura que é um vetor de 5 elementos. Ler os valores para a
+estrutura e imprimir a média do número de páginas dos livros.
