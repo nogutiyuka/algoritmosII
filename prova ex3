@@ -1,0 +1,64 @@
+Faça um programa que, dados dois vetores bidimensionais (matrizes A e B) com dimensões de no máximo 5x5 elementos, retorne:
+
+a soma destas duas matrizes
+a soma das diagonais de cada matriz
+a multiplicação das duas matrizes
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+int main () {
+	int v[3][3], soma[3][3], m[3][3], multi[3][3];
+	int soma1 = 0;
+	int soma2 = 0;
+    
+    for (int i = 0; i < 3; i++){
+        for (int a = 0; a < 3; a++){
+            printf("Valor matriz A: ");
+            scanf("%d", &v[i][a]);
+        }
+    }
+    for (int i = 0; i < 3; i++){
+        for (int a = 0; a < 3; a++){
+            printf("Valor matriz B: ");
+            scanf("%d", &m[i][a]);
+        }
+    }
+    
+    for (int f = 0; f < 3; f++){
+        for (int g = 0; g < 3; g++){
+            soma[f][g] = v[f][g] + m[f][g]; 
+        }
+    }
+    
+    for (int b = 0; b < 3; b++){
+        for (int c = 0; c < 3; c++){
+            printf("A matriz soma é: %d\n", soma[b][c]); 
+        }
+    }
+    
+    for (int f = 0; f < 3; f++){
+        for (int g = 0; g < 3; g++){
+            multi[f][g] = v[f][g] * m[f][g]; 
+        }
+    }
+    
+    for (int b = 0; b < 3; b++){
+        for (int c = 0; c < 3; c++){
+            printf("A matriz multiplicao é: %d\n", multi[b][c]); 
+        }
+    }
+
+    for (int b = 0; b < 3; b++){
+        soma1 = soma1 + v[b][b];
+    }
+    for (int b = 0; b < 3; b++){
+        soma2 = soma2 + m[b][b];
+    }
+    
+    printf("A soma da diagonal da matriz A é: %d\n", soma1);
+    printf("A soma da diagonal da matriz B é: %d\n", soma2);
+    
+	return 0;
+}
