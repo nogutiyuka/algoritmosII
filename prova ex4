@@ -1,0 +1,30 @@
+Crie uma struct chamada "Retangulo" que armazene altura e largura de um retângulo. Em seguida, crie um programa que preencha essas informações e 
+calcule a área e o perímetro do retângulo.
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+struct Retangulo {
+	float altura;
+	float largura;
+};
+
+int main () {
+    
+	struct Retangulo ret;
+	
+	printf("Informe a altura: ");
+	scanf("%f", &ret.altura);
+	printf("Informe a largura: ");
+	scanf("%f", &ret.largura);
+	
+	float area = ret.altura * ret.largura;
+	float perimetro = (2 * ret.altura) + (2 * ret.largura);
+	
+	
+	printf("A area do retangulo é: %.2f \n", area);
+	printf("O perimetro do retangulo é: %.2f \n", perimetro);
+		
+	return 0;
+}
