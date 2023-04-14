@@ -1,0 +1,30 @@
+Escreva um programa que leia uma matriz n x m do usuário e a transforme em um vetor unidimensional de n.m posições
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+
+int main () {
+	int v[2][2];
+	int m[4];
+    
+    for (int i = 0; i < 2; i++){
+        for (int a = 0; a < 2; a++){
+            printf("Valor matriz: ");
+            scanf("%d", &v[i][a]);
+        }
+    }
+    for (int i = 0; i < 4; i++){
+        for (int a = 0; a < 2; a++){
+            m[i] = v[i][a];
+        }
+    }
+    
+    for (int b = 0; b < 3; b++){
+        printf("A matriz unidimensional é: %d\n", m[b]); 
+    }
+
+	return 0;
+}
+
+TERMINAR!!!!!!!!!!!!!!!!!!
