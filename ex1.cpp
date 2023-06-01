@@ -1,20 +1,19 @@
 #include <stdio.h>
 
-void calcular(int n1, int n2){
-	int mult = n1 * n2;
-	int soma = n1 + n2;
-	printf("A multiplicacao de %d por %d e de: %d", n1, n2, mult);
-	printf("\nA soma de %d e %d e de: %d", n1, n2, soma);
+void troca(int *a, int *b){
+	int c = *a;
+	*a = *b;
+	*b = c;
 }
 
 int main()
 {
-	int n1, n2;
-	printf("Informe o primeiro valor inteiro para a multiplicacao e soma: ");
-	scanf("%d", &n1);
-	printf("\nInforme o segundo valor inteiro para a multiplicacao e soma: ");
-	scanf("%d", &n2);
-	calcular(n1, n2);
+	int a, b;
+	printf("Informe o primeiro valor a ser trocado: ");
+	scanf("%d", &a);
+	printf("Informe o segundo valor a ser trocado: ");
+	scanf("%d", &b);
+	troca(&a, &b);
+	printf("Agora o primeiro valor e %d e segundo valor e %d", a, b);
 	return 0;
 }
-
